@@ -1,6 +1,6 @@
 # Repository Scoring System
 
-An experimental approach to evaluating GitHub repositories based on popularity, community adoption, and recent activity.
+An experimental approach to evaluating GitHub repositories based on stars, forks, and the recency of updates.
 
 ## Features
 - Fetches repositories from GitHub using a public search endpoint
