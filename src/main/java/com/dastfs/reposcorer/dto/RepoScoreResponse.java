@@ -8,4 +8,6 @@ import java.util.List;
 public class RepoScoreResponse {
     private List<Repo> repos;
     private int totalCount;
+    private int page;
+    private int size;
 }

@@ -18,8 +18,8 @@ public class RepoScorerController implements RepoScorerApi {
     @GetMapping
     public RepoScoreResponse getRepositories(@RequestParam String language,
                                              @RequestParam String createdSince,
-                                             @RequestParam int page,
-                                             @RequestParam int size) {
+                                             @RequestParam(required = false, defaultValue = "1") int page ,
+                                             @RequestParam(required = false, defaultValue = "10") int size) {
         return scorerService.getRepositoriesWithScore(language, createdSince, page, size);
     }
 

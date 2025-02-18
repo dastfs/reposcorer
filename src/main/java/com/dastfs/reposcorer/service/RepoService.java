@@ -18,6 +18,8 @@ public class RepoService {
         String query = "language:" + language + "+created:>" + createdSince;
         GithubSearchResponse githubSearchResponse = githubApiClient.searchRepos(query, "stars", "desc", size,  page);
         RepoScoreResponse repoScoreResponse = repoMapper.toRepoScoreResponse(githubSearchResponse);
+        repoScoreResponse.setPage(page);
+        repoScoreResponse.setSize(size);
         scorerService.addScores(repoScoreResponse);
         return repoScoreResponse;
     }
