@@ -100,7 +100,8 @@ Fetches and returns a list of repositories along with their popularity scores.
 ```
 # TODO
 - [ ] Create visualizations for the repository scores
+- [ ] Implement sorting 
 - [ ] Implement github query builder
-- [ ] Implement caching and rate limiting for github queries
 - [ ] Constants for MAX_STARS, MAX_FORKS, RECENCY_DECAY_CONSTANT may be configurable
+- [ ] Implement caching and rate limiting for github queries
 - [ ] Add more unit tests
