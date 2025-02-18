@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: reposcorer
+
+client:
+  api:
+    github:
+      url: https://api.github.com
+      version: 2022-11-28
+      token: github-token
+logging:
+  level:
+    root: INFO
+    com.dastfs: DEBUG
+
