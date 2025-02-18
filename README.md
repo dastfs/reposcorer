@@ -1,6 +1,6 @@
 # Repository Scoring System
 
-A balanced approach to evaluating GitHub repositories based on popularity, community adoption, and recent activity.
+An experimental approach to evaluating GitHub repositories based on popularity, community adoption, and recent activity.
 
 ## Features
 - Fetches repositories from GitHub using a public search endpoint
@@ -81,8 +81,10 @@ Score = (StarsNorm * ForksNorm * RecencyNorm)^(1/3)
 Fetches and returns a list of repositories along with their popularity scores.
 
 #### Query Parameters:
-- `created_date` (optional): Filter repositories created after this date
-- `language` (optional): Filter repositories by language
+- `created_date`: Filter repositories created after this date
+- `language` : Filter repositories by language
+- `page` (optional): Page number for pagination
+- `size` (optional): Number of items per page
 
 #### Response Example:
 ```json
@@ -96,3 +98,9 @@ Fetches and returns a list of repositories along with their popularity scores.
   }
 ]
 ```
+# TODO
+- [ ] Create visualizations for the repository scores
+- [ ] Implement github query builder
+- [ ] Implement caching and rate limiting for github queries
+- [ ] Constants for MAX_STARS, MAX_FORKS, RECENCY_DECAY_CONSTANT may be configurable
+- [ ] Add more unit tests
